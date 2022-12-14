@@ -31,6 +31,10 @@ export class AddrolesService {
   setParentAndTeacherWithStudent(teacherName:String,parentName: String, student:Student): Observable<object>{
     return this.httpClient.post(this.URLforStudent+"/assign/"+teacherName+"/"+parentName,student)
   }
+  //http://localhost:9091/teacher/mahawar
+  addListOfStudentsToTeaacher(teacherName:String,parentName:String, student:Student): Observable<object>{
+    return this.httpClient.put(this.URLforTeacher+"/"+teacherName+"/"+parentName,student)
+  }
 
 
 

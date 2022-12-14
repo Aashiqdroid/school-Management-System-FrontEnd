@@ -95,7 +95,5 @@ export class ManagestudentsComponent implements OnInit{
 
 
 
-  addComment0() {
 
-  }
 }

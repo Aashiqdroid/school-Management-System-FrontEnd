@@ -33,11 +33,19 @@ export class AddstudentComponent {
 
     })
   }
-
   studentREgistration() {
-    this.addrolesService.setParentAndTeacherWithStudent(this.teacherName,
-      this.parentName, this.student).subscribe(
-      data => {
+    // this.addrolesService.setParentAndTeacherWithStudent(this.teacherName,
+    //   this.parentName, this.student).subscribe(
+    //   data => {
+    //     console.log(data)
+    //     this.studentForm.reset()
+    //   }, err => {
+    //     console.log(err)
+    //   }
+    // )
+    this.addrolesService.addListOfStudentsToTeaacher(this.teacherName,this.parentName,this.student).subscribe(
+      data=>{
+
         console.log(data)
         this.studentForm.reset()
       }, err => {

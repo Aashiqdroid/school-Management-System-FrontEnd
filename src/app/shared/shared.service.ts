@@ -1,15 +1,26 @@
 import { Injectable } from '@angular/core';
+import {Parent} from "../parent";
+import {User} from "../user";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
 
+
   isAdmin !: boolean;
   isTeacher !: boolean;
   isStudent !: boolean;
   isParent !: boolean;
 
+  private user:User=new User()
+
+  setParentOb(user:User){
+    this.user=user
+  }
+  getParentOb(){
+    return this.user
+  }
 
   constructor() { }
 

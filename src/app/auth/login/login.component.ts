@@ -20,6 +20,8 @@ export class LoginComponent implements OnInit{
   loginForm!:FormGroup;
   loginMode:any;
 
+  loggingParent:Parent=new Parent()
+
 
   isAdmin:boolean=false;
   isTeacher:boolean=false;
@@ -69,6 +71,11 @@ export class LoginComponent implements OnInit{
           this.sharedService.setParent(this.isParent)
 
           console.log(data);
+
+          this.sharedService.setParentOb(this.user)
+
+
+
           this.router.navigate(['/dashboard']);
 
         }, error => alert("Error login"));

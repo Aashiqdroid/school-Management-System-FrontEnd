@@ -10,45 +10,45 @@ import {AddrolesService} from "../../../addroles.service";
   templateUrl: './addteacher.component.html',
   styleUrls: ['./addteacher.component.css']
 })
-export class AddteacherComponent implements OnInit{
+export class AddteacherComponent implements OnInit {
 
-  teacherForm!:FormGroup
-  teacher:Teacher=new Teacher()
+  teacherForm!: FormGroup
+  teacher: Teacher = new Teacher()
+
   constructor(private addrolesService: AddrolesService,
               private router: Router,
-              private formbuilder:FormBuilder) {
+              private formbuilder: FormBuilder) {
   }
 
   teacherREgistration() {
 
     if (this.teacher.username != null && this.teacher.password != null && this.teacher.mobile != null &&
-      this.teacher.subjectTaken != null ){
+      this.teacher.subjectTaken != null) {
 
       this.addrolesService.registerTeacher(this.teacher).subscribe(
-        data=>{
+        data => {
 
           console.log("Registration success");
           this.teacherForm.reset()
 
-        },error => {
+        }, error => {
           alert("Error")
         }
       )
 
 
-
-    }
-    else {
+    } else {
       alert("please all fields")
     }
 
   }
+
   ngOnInit(): void {
-    this.teacherForm= this.formbuilder.group({
-      username:new FormControl("",Validators.required),
-      password:new FormControl("",Validators.required),
-      mobile:new FormControl("",Validators.required),
-      subjectTaken:new FormControl("",Validators.required),
+    this.teacherForm = this.formbuilder.group({
+      username: new FormControl("", Validators.required),
+      password: new FormControl("", Validators.required),
+      mobile: new FormControl("", Validators.required),
+      subjectTaken: new FormControl("", Validators.required),
 
     })
   }
