@@ -1,0 +1,68 @@
+<p></p>
+<form [formGroup]="parentForm" (ngSubmit)="parentRegistration()">
+  <mat-form-field appearance="outline">
+    <mat-label>Parent name</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="parent.username"
+      formControlName="username"
+      id="username"
+      name="username">
+  </mat-form-field>
+
+  <br/>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+
+    <input type="text"
+           matInput
+           [(ngModel)]="parent.password"
+           formControlName="password"
+           id="password"
+           name="password">
+
+  </mat-form-field>
+
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Parent Address</mat-label>
+
+    <input type="text"
+           matInput
+           [(ngModel)]="parent.address"
+           formControlName="address"
+           id="address"
+           name="address">
+
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Parent Mobile</mat-label>
+    <input type="text"
+           matInput
+           [(ngModel)]="parent.mobile"
+           formControlName="mobile"
+           id="mobile"
+           name="mobile">
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Parent Age</mat-label>
+    <input type="text"
+           matInput
+           [(ngModel)]="parent.age"
+           formControlName="age"
+           id="age"
+           name="age"></mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Relationship with child</mat-label>
+  <input type="text" matInput
+         [(ngModel)]="parent.relationshipWithChild"
+         formControlName="relationshipWithChild"
+         id="relationshipWithChild"
+         name="relationshipWithChild"></mat-form-field><br/>
+  <button style="margin-top: 14px" mat-raised-button color="primary" type="submit">Submit</button>
+</form>

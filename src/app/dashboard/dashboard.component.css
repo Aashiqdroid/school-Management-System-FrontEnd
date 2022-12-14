@@ -1,0 +1,16 @@
+a{
+  margin: 5px;
+}
+h2{
+  font-weight: bold;
+}
+mat-card{
+}
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.glow-button:hover {
+  box-shadow: 0 5px 15px rgba(14, 1, 23, 0.4);
+}

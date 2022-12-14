@@ -1,0 +1,91 @@
+<p></p>
+<form [formGroup]="studentForm" (ngSubmit)="studentREgistration()">
+  <mat-form-field appearance="outline">
+    <mat-label>Student name</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="student.username"
+      formControlName="username"
+      id="username"
+      name="username">
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Student password</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="student.password"
+      formControlName="password"
+      id="password"
+      name="password">
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Student age</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="student.age"
+      formControlName="age"
+      id="age"
+      name="age">
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Student address</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="student.address"
+      formControlName="address"
+      id="address"
+      name="address">
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Student mobile</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="student.mobile"
+      formControlName="mobile"
+      id="mobile"
+      name="mobile">
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Guardian name</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="student.guardianName"
+      formControlName="guardianName"
+      id="guardianName"
+      name="guardianName">
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Teacher in-charge</mat-label>
+    <mat-select formControlName="teacherName"
+                [(ngModel)]="teacherName" id="teacherName" name="teacherName" placeholder="teacherName">
+      <mat-option value="mahawar">Mahawar</mat-option>
+      <mat-option value="john">John</mat-option>
+      <mat-option value="peter">Peter</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Select Guardian</mat-label>
+    <mat-select formControlName="parentName"
+                [(ngModel)]="parentName" id="parentName" name="parentName" placeholder="parentName">
+      <mat-option value="zaky">Zaky</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+
+  <button [disabled]="studentForm.invalid" style="margin-top: 14px" mat-raised-button color="primary" type="submit">Submit</button>
+</form>

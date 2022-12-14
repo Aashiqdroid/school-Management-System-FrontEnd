@@ -1,0 +1,11 @@
+input {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+mat-form-field {
+  height: 1px;
+  margin: 10px 2px 5px 2px;
+  width: 100%;
+}
+

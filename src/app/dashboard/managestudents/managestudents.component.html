@@ -1,0 +1,179 @@
+<div xmlns="http://www.w3.org/1999/html">
+  <table id="table" class="mat-elevation-z8" mat-table matSort [dataSource]="dataSource">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">ID</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">Username</th>
+      <td mat-cell *matCellDef="let row">{{row.username}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">Address</th>
+      <td mat-cell *matCellDef="let row">{{row.address}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">Age</th>
+      <td mat-cell *matCellDef="let row">{{row.age}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="mobile">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">Mobile</th>
+      <td mat-cell *matCellDef="let row">{{row.mobile}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="guardianName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">Guardian Name</th>
+      <td mat-cell *matCellDef="let row">{{row.guardianName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">Delete</th>
+      <td mat-cell *matCellDef="let row">
+        <button style="margin: 5px" (click)="deleteStudent(row)" mat-raised-button color="warn">Delete</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">Edit</th>
+      <td mat-cell *matCellDef="let row">
+        <button style="margin: 5px" mat-raised-button color="primary" type="button"
+                (click)="editItems(row)"
+                data-toggle="modal" data-target="#exampleModal">Edit
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="comment">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="">Add Comment</th>
+      <td mat-cell *matCellDef="let row">
+        <button style="margin: 5px" mat-raised-button color="primary" (click)="editItems(row)"
+                data-toggle="modal" data-target="#commentModal">Comment
+        </button>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumn"></tr>
+    <tr mat-row *matRowDef="let row; columns:displayedColumn"></tr>
+  </table>
+  <mat-paginator style="margin-right: 165px" [pageSizeOptions]="[5,10,25,100]"
+                 aria-label="Select page of users">
+  </mat-paginator>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLable">Update item</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form id="updateFormModal" #updateForm="ngForm" (ngSubmit)="update()">
+
+          <div>
+            <mat-form-field appearance="standard">
+              <mat-label>Product ID</mat-label>
+              <input
+                matInput placeholder="Product"
+                type="text" disabled #id [(ngModel)]="itemToUpdate.id" id="id" name="id"/>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field appearance="standard">
+              <mat-label>Student name</mat-label>
+              <input
+                matInput placeholder="Product"
+                type="text" #name [(ngModel)]="itemToUpdate.username" id="username" name="username"/>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field appearance="standard">
+              <mat-label>Address</mat-label>
+              <input
+                matInput placeholder="Item type"
+                type="text" #type [(ngModel)]="itemToUpdate.address" id="address" name="address"/>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field appearance="standard">
+              <mat-label>Age</mat-label>
+              <input
+                matInput placeholder="Price"
+                type="text" #price [(ngModel)]="itemToUpdate.age" id="age" name="age"/>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field appearance="standard">
+              <mat-label>Mobile</mat-label>
+              <input
+                matInput placeholder="Price"
+                type="text" #price [(ngModel)]="itemToUpdate.mobile" id="mobile" name="mobile"/>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field appearance="standard">
+              <mat-label>GuardianName</mat-label>
+              <input
+                matInput placeholder="Price"
+                type="text" #price [(ngModel)]="itemToUpdate.guardianName" id="guardianName" name="guardianName"/>
+            </mat-form-field>
+          </div>
+
+          <button style="margin-top: 12px" (click)="update()" id="regButton0" mat-raised-button color="primary"
+                  type="submit"
+                  class="btn-close" data-dismiss="modal" aria-label="Close">Update
+          </button>
+
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="commentModalLabel">Add comments about this student </h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form (ngSubmit)="update()">
+
+          <input [(ngModel)]="itemToUpdate.teacherComment" [ngModelOptions]="{standalone: true}">
+          <button style="margin-left: 5px" (click)="update()"
+                  type="submit" mat-raised-button color="primary"
+                  class="btn-close" data-dismiss="modal" aria-label="Close">Submit</button>
+          <button style="margin-left: 5px" type="submit" mat-raised-button color="warn"
+                  class="btn-close" data-dismiss="modal" aria-label="Close">Close
+          </button>
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

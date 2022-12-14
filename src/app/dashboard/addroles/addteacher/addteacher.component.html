@@ -1,0 +1,51 @@
+<p></p>
+<form [formGroup]="teacherForm" (ngSubmit)="teacherREgistration()">
+  <mat-form-field appearance="outline">
+    <mat-label>Teacher name</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="teacher.username"
+      formControlName="username"
+      id="username"
+      name="username">
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Teacher password</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="teacher.password"
+      formControlName="password"
+      id="password"
+      name="password">
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Teacher mobile </mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="teacher.mobile"
+      formControlName="mobile"
+      id="mobile"
+      name="mobile">
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Subject take</mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="teacher.subjectTaken"
+      formControlName="subjectTaken"
+      id="subjectTaken"
+      name="subjectTaken">
+  </mat-form-field>
+  <br/>
+
+  <button style="margin-top: 14px" mat-raised-button color="primary" type="submit">Submit</button>
+</form>
