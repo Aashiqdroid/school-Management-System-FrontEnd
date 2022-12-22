@@ -1,3 +1,5 @@
+import {Teacher} from "./teacher";
+
 export class Student {
   username!:String;
   password!:String;

@@ -18,6 +18,7 @@ import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { ChildreviewsComponent } from './childreviews/childreviews.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import { ChildresultsComponent } from './childresults/childresults.component';
 
 
 
@@ -29,7 +30,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     AddparentComponent,
     AddstudentComponent,
     ManagestudentsComponent,
-    ChildreviewsComponent
+    ChildreviewsComponent,
+    ChildresultsComponent
   ],
     imports: [
         CommonModule,

@@ -27,7 +27,6 @@ export class AddstudentComponent {
       mobile: new FormControl("", Validators.required),
       age: new FormControl("", Validators.required),
       address: new FormControl("", Validators.required),
-      guardianName: new FormControl("", Validators.required),
       teacherName: new FormControl("", Validators.required),
       parentName: new FormControl("", Validators.required)
 
@@ -43,7 +42,7 @@ export class AddstudentComponent {
     //     console.log(err)
     //   }
     // )
-    this.addrolesService.addListOfStudentsToTeaacher(this.teacherName,this.parentName,this.student).subscribe(
+    this.addrolesService.addListOfStudentsToTeaacher(this.teacherName,this.student.guardianName,this.student).subscribe(
       data=>{
 
         console.log(data)

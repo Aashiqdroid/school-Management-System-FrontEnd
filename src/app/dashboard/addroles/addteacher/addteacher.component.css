@@ -8,3 +8,7 @@ mat-form-field {
   margin: 10px 2px 5px 2px;
   width: 100%;
 }
+form{
+  margin-left: 50px;
+  width: 40%;
+}

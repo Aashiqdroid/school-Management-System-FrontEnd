@@ -55,17 +55,6 @@
       name="mobile">
   </mat-form-field>
   <br/>
-  <mat-form-field appearance="outline">
-    <mat-label>Guardian name</mat-label>
-    <input
-      matInput
-      type="text"
-      [(ngModel)]="student.guardianName"
-      formControlName="guardianName"
-      id="guardianName"
-      name="guardianName">
-  </mat-form-field>
-  <br/>
 
   <mat-form-field appearance="outline">
     <mat-label>Teacher in-charge</mat-label>
@@ -80,7 +69,7 @@
   <mat-form-field appearance="outline">
     <mat-label>Select Guardian</mat-label>
     <mat-select formControlName="parentName"
-                [(ngModel)]="parentName" id="parentName" name="parentName" placeholder="parentName">
+                [(ngModel)]="student.guardianName" id="guardianName" name="guardianName" placeholder="guardianName">
       <mat-option value="zaky">Zaky</mat-option>
       <mat-option value="nijam">Nijam</mat-option>
 

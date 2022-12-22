@@ -31,6 +31,7 @@ import {AddparentComponent} from "./dashboard/addroles/addparent/addparent.compo
 import {AddstudentComponent} from "./dashboard/addroles/addstudent/addstudent.component";
 import {ManagestudentsComponent} from "./dashboard/managestudents/managestudents.component";
 import {ChildreviewsComponent} from "./dashboard/childreviews/childreviews.component";
+import {ChildresultsComponent} from "./dashboard/childresults/childresults.component";
 
 
 
@@ -43,7 +44,8 @@ const routes: Routes = [
           {path:'add-student',component:AddstudentComponent}
         ]},
       {path:'manage-students',component:ManagestudentsComponent},
-      {path:'child-reviews',component:ChildreviewsComponent}
+      {path:'child-reviews',component:ChildreviewsComponent},
+      {path:'child-results',component:ChildresultsComponent}
     ]
     },
 

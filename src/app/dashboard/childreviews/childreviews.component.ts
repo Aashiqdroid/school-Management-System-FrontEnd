@@ -39,9 +39,6 @@ export class ChildreviewsComponent implements OnInit{
         console.log(err)
       }
     )
-
-
-
   }
 
 }

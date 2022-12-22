@@ -1,115 +1,168 @@
 <div>
-  <div style="display: flex">
-    <mat-card style="height: 13cm" *ngIf="isAdmin">
-      <mat-card-content>
-        <h1><a routerLink="add-roles">Add roles</a></h1>
-        <router-outlet></router-outlet>
-      </mat-card-content>
+  <div id="">
+    <mat-card id="headerCard">
+
+      <h1 id="header">Hi {{userType}}, Welcome</h1>
+
     </mat-card>
+    <div id="outer">
+      <div id="inner">
 
-    <mat-card *ngIf="isAdmin">
-      <h2>Library management</h2>
-      <mat-card-content>
-        library things will be managed here
-      </mat-card-content>
-    </mat-card>
+        <a *ngIf="isAdmin" routerLink="add-roles" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Add roles</h2>
+            <mat-card-content>
+              You can add entities here
+            </mat-card-content>
+          </mat-card>
+        </a>
+        <a *ngIf="isAdmin" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Library management!!</h2>
+            <mat-card-content>
+              library things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
+        <a *ngIf="isAdmin" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Manage teachers</h2>
+            <mat-card-content>
+              library things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
+        <a *ngIf="isAdmin" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Manage Students</h2>
+            <mat-card-content>
+              library things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <a *ngIf="isTeacher" routerLink="/dashboard" class="button glow-button">
-      <mat-card>
-        <h2>Manage timeTable</h2>
-        <mat-card-content>
-          Time table things will be managed here
-        </mat-card-content>
-      </mat-card>
-    </a>
+        <a *ngIf="isTeacher" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Manage timeTable</h2>
+            <mat-card-content>
+              Time table things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <a *ngIf="isTeacher" routerLink="/dashboard" class="button glow-button">
-      <mat-card>
-        <h2>Student attendance</h2>
-        <mat-card-content>
-          Time table things will be managed here
-        </mat-card-content>
-      </mat-card>
-    </a>
+        <a *ngIf="isTeacher" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Student attendance</h2>
+            <mat-card-content>
+              Mark students attendance
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <a *ngIf="isTeacher" routerLink="manage-students" class="button glow-button">
-      <mat-card>
-        <h2>Manage students</h2>
-        <mat-card-content>
-          Time table things will be managed here
-        </mat-card-content>
-      </mat-card>
-    </a>
+        <a *ngIf="isTeacher" routerLink="manage-students" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Manage students</h2>
+            <mat-card-content>
+              You can manage students here
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <a *ngIf="isTeacher" routerLink="/dashboard" class="button glow-button">
-      <mat-card>
-        <h2>Parents notices</h2>
-        <mat-card-content>
-          Time table things will be managed here
-        </mat-card-content>
-      </mat-card>
-    </a>
+        <a *ngIf="isTeacher" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Parents notices</h2>
+            <mat-card-content>
+              Time table things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <mat-card *ngIf="isStudent">
-      <h2>Exam results</h2>
-      <mat-card-content>
-        Time table things will be managed here
-      </mat-card-content>
-    </mat-card>
+        <a *ngIf="isStudent" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Exam results</h2>
+            <mat-card-content>
+              Time table things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <mat-card *ngIf="isStudent">
-      <h2>Attendance analysis</h2>
-      <mat-card-content>
-        Time table things will be managed here
-      </mat-card-content>
-    </mat-card>
+        <a *ngIf="isStudent" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Tester</h2>
+            <mat-card-content>
+              Time table things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <mat-card *ngIf="isStudent">
-      <h2>Notices</h2>
-      <mat-card-content>
-        Time table things will be managed here
-      </mat-card-content>
-    </mat-card>
+        <a *ngIf="isStudent" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Attendance analysis</h2>
+            <mat-card-content>
+              Time table things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <a routerLink="/dashboard" class="button glow-button">
-      <mat-card>
-        <h2>Child exam results</h2>
-        <mat-card-content>
-          Time table things will be managed here
-        </mat-card-content>
-      </mat-card>
-    </a>
+        <a *ngIf="isStudent" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Notices</h2>
+            <mat-card-content>
+              Time table things will be managed here
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <a routerLink="/dashboard" class="button glow-button">
-      <mat-card>
-        <h2>Child attendance</h2>
-        <mat-card-content>
-          Time table things will be managed here
-        </mat-card-content>
-      </mat-card>
-    </a>
+        <a *ngIf="isParent" routerLink="child-results" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Child exam results</h2>
+            <mat-card-content>
+              Term exam results of your children
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <a routerLink="/dashboard" class="button glow-button">
-      <mat-card>
-        <h2>Notices</h2>
-        <mat-card-content>
-          Time table things will be managed here
-        </mat-card-content>
-      </mat-card>
-    </a>
+        <a *ngIf="isParent" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Child attendance</h2>
+            <mat-card-content>
+              Attendance analysis
+            </mat-card-content>
+          </mat-card>
+        </a>
 
-    <a routerLink="child-reviews" class="button glow-button">
-      <mat-card>
-        <h2>Child reviews</h2>
-        <mat-card-content>
-          Time table things will be managed here
-        </mat-card-content>
-      </mat-card>
-    </a>
+        <a *ngIf="isParent" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Notices</h2>
+            <mat-card-content>
+              Notices from school management
+            </mat-card-content>
+          </mat-card>
+        </a>
+
+        <a *ngIf="isParent" routerLink="child-reviews" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Child reviews</h2>
+            <mat-card-content>
+              Child's goods and bad's
+            </mat-card-content>
+          </mat-card>
+        </a>
+
+        <a *ngIf="isParent" routerLink="/dashboard" class="button glow-button">
+          <mat-card class="zoom">
+            <h2>Other </h2>
+            <mat-card-content>
+              Child's goods and bad's
+            </mat-card-content>
+          </mat-card>
+        </a>
 
 
+      </div>
+    </div>
+    <router-outlet></router-outlet>
   </div>
-  <router-outlet></router-outlet>
+
+
 </div>
-
-

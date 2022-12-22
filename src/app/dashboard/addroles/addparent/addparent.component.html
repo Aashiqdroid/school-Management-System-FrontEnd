@@ -64,5 +64,5 @@
          formControlName="relationshipWithChild"
          id="relationshipWithChild"
          name="relationshipWithChild"></mat-form-field><br/>
-  <button style="margin-top: 14px" mat-raised-button color="primary" type="submit">Submit</button>
+  <button [disabled]="parentForm.invalid" style="margin-top: 14px" mat-raised-button color="primary" type="submit">Submit</button>
 </form>

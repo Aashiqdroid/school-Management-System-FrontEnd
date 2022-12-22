@@ -1,0 +1,23 @@
+#table{
+  font-size: 40px;
+  width: 100%;
+
+  margin-top: 20px;
+
+}
+mat-card{
+  background-color: #cdf1cd;
+  width: 100%;
+
+}
+h1{
+  color: #060707;
+}
+#inner {
+}
+#outer {
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
