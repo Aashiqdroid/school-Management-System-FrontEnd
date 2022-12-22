@@ -1,0 +1,49 @@
+<table id="table" class="mat-elevation-z8" mat-table matSort [dataSource]="dataSource">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="">Child ID</th>
+    <td mat-cell *matCellDef="let row">{{row.id}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="">Child Name</th>
+    <td mat-cell *matCellDef="let row">{{row.username}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="viewResult">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="">View</th>
+    <td mat-cell *matCellDef="let row">
+      <button style="margin: 5px" mat-raised-button color="primary" (click)="showResult(row)"
+              data-toggle="modal" data-target="#addResultModal">View Results
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumn"></tr>
+  <tr mat-row *matRowDef="let row; columns:displayedColumn"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5,10,25,100]"
+               aria-label="Select page of users">
+</mat-paginator>
+
+<div class="modal fade" id="addResultModal" tabindex="-1" aria-labelledby="addResultModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addResultModalLabal">Results</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <label>Maths: {{result.maths}}</label><br/>
+        <label>Science: {{result.science}}</label><br/>
+        <label>English: {{result.english}}</label><br/>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
