@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SharedService} from "../shared/shared.service";
+import {ServiceService} from "../service.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -15,8 +16,8 @@ export class DashboardComponent implements OnInit{
 
   userType:String="";
 
-
-  constructor(private sharedService:SharedService) {
+  constructor(private sharedService:SharedService,
+              private service:ServiceService) {
     this.isAdmin=this.sharedService.getAdmin()
     this.isTeacher=this.sharedService.getTeacher()
     this.isStudent=this.sharedService.getStudent()

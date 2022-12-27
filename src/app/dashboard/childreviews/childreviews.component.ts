@@ -28,7 +28,7 @@ export class ChildreviewsComponent implements OnInit{
   fetchedComments:any;
 
   ngOnInit(): void {
-    this.teacherService.getTeacherComments(this.sharedSerivce.getParentOb().username).subscribe(
+    this.teacherService.getTeacherComments(this.sharedSerivce.getUserOb().username).subscribe(
       data=>{
         console.log(data)
         this.fetchedComments=data

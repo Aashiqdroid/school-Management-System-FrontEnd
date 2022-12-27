@@ -72,9 +72,7 @@ export class LoginComponent implements OnInit{
 
           console.log(data);
 
-          this.sharedService.setParentOb(this.user)
-
-
+          this.sharedService.setUserOb(this.user)
 
           this.router.navigate(['/dashboard']);
 
@@ -94,6 +92,9 @@ export class LoginComponent implements OnInit{
 
           this.isParent=false;
           this.sharedService.setParent(this.isParent)
+
+          this.sharedService.setUserOb(this.user)
+
 
           console.log(data);
           this.router.navigate(['/dashboard']);

@@ -19,6 +19,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import { ChildreviewsComponent } from './childreviews/childreviews.component';
 import {MatTabsModule} from "@angular/material/tabs";
 import { ChildresultsComponent } from './childresults/childresults.component';
+import { ParentnoticesComponent } from './parentnotices/parentnotices.component';
+import { ViewnoticesComponent } from './viewnotices/viewnotices.component';
+import {ScrollingModule} from "@angular/cdk/scrolling";
 
 
 
@@ -31,12 +34,14 @@ import { ChildresultsComponent } from './childresults/childresults.component';
     AddstudentComponent,
     ManagestudentsComponent,
     ChildreviewsComponent,
-    ChildresultsComponent
+    ChildresultsComponent,
+    ParentnoticesComponent,
+    ViewnoticesComponent
   ],
     imports: [
         CommonModule,
         RouterLinkWithHref,
-        RouterOutlet, RouterModule, ReactiveFormsModule, FormsModule, MatCardModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatSelectModule, MatTableModule, MatSortModule, MatPaginatorModule, MatTabsModule
+        RouterOutlet, RouterModule, ReactiveFormsModule, FormsModule, MatCardModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatSelectModule, MatTableModule, MatSortModule, MatPaginatorModule, MatTabsModule, ScrollingModule
     ],exports:[MatInputModule]
 })
 export class DashboardModule { }

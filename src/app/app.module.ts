@@ -32,6 +32,8 @@ import {AddstudentComponent} from "./dashboard/addroles/addstudent/addstudent.co
 import {ManagestudentsComponent} from "./dashboard/managestudents/managestudents.component";
 import {ChildreviewsComponent} from "./dashboard/childreviews/childreviews.component";
 import {ChildresultsComponent} from "./dashboard/childresults/childresults.component";
+import {ParentnoticesComponent} from "./dashboard/parentnotices/parentnotices.component";
+import {ViewnoticesComponent} from "./dashboard/viewnotices/viewnotices.component";
 
 
 
@@ -45,7 +47,9 @@ const routes: Routes = [
         ]},
       {path:'manage-students',component:ManagestudentsComponent},
       {path:'child-reviews',component:ChildreviewsComponent},
-      {path:'child-results',component:ChildresultsComponent}
+      {path:'child-results',component:ChildresultsComponent},
+      {path:'parent-notices',component:ParentnoticesComponent},
+      {path:'view-notices',component:ViewnoticesComponent},
     ]
     },
 
@@ -56,6 +60,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+
 
 
   ],

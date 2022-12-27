@@ -15,10 +15,10 @@ export class SharedService {
 
   private user:User=new User()
 
-  setParentOb(user:User){
+  setUserOb(user:User){
     this.user=user
   }
-  getParentOb(){
+  getUserOb(){
     return this.user
   }
 

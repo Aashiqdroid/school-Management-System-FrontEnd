@@ -35,7 +35,7 @@ export class ChildresultsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.studentService.getStudentsOfParent(this.sharedSerivce.getParentOb().username).subscribe(
+    this.studentService.getStudentsOfParent(this.sharedSerivce.getUserOb().username).subscribe(
       data=>{console.log(data)
         this.fetchedData=data
         this.dataSource=new MatTableDataSource(this.fetchedData);
@@ -51,7 +51,7 @@ export class ChildresultsComponent implements OnInit {
     this.showResultOnModal()
   }
   showResultOnModal(){
-    this.studentService.getExamResults(this.sharedSerivce.getParentOb().username,
+    this.studentService.getExamResults(this.sharedSerivce.getUserOb().username,
       this.studentResultToBeViewed.username).subscribe(
         data=>{
           this.fetchedResult=data
