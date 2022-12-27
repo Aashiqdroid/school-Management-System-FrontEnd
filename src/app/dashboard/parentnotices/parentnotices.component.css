@@ -1,0 +1,11 @@
+#inner{
+  width: 50%;
+}
+#outer {
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+mat-form-field{
+  width: 100%;
+}

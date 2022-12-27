@@ -1,0 +1,18 @@
+
+#inner{
+  width: 50%;
+}
+#outer {
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+.example-viewport {
+  height: 500px;
+  width: 100%;
+
+}
+
+.example-item {
+
+}

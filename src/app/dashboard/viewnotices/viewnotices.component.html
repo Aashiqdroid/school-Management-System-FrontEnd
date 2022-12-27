@@ -1,0 +1,35 @@
+<div id="outer" style="margin-top: 20px">
+  <div id="inner">
+    <mat-card>
+      <mat-card-content>
+
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+          <div *cdkVirtualFor="let i of notices" class="example-item">
+
+
+            <div>
+              <mat-card>
+                <mat-card-content>
+
+
+                  <h3 style="font-weight: bold">Title: {{i.title}}</h3>
+                  <h4>Content: {{i.description}}</h4>
+                  <h5>Issued date: {{i.date}}</h5>
+<!--                  <h5>Notice by: {{i.teacher.username}}</h5>-->
+
+                </mat-card-content>
+              </mat-card>
+            </div>
+            <hr/>
+
+
+          </div>
+        </cdk-virtual-scroll-viewport>
+
+
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
+
